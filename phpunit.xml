@@ -16,13 +16,21 @@
         <include>
             <directory suffix=".php">./app</directory>
         </include>
+        <exclude>
+            <file>./app/Console/Kernel.php</file>
+            <directory suffix=".php">./app/Providers</directory>
+            <directory suffix=".php">./app/Http/Controllers/Auth</directory>
+            <directory suffix=".php">./app/Http/Middleware</directory>
+            <directory suffix=".php">./app/Http/Requests/Auth</directory>
+            <directory suffix=".php">./app/View/Components</directory>
+        </exclude>
     </coverage>
     <php>
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
-        <!-- <env name="DB_CONNECTION" value="sqlite"/> -->
-        <!-- <env name="DB_DATABASE" value=":memory:"/> -->
+        <env name="DB_CONNECTION" value="mysql"/>
+        <env name="DB_DATABASE" value="testing_training_test"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

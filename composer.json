@@ -6,17 +6,25 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "adyen/php-api-library": "^13.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
+        "laravel/horizon": "^5.10",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
+        "barryvdh/laravel-ide-helper": "^2.12",
+        "brianium/paratest": "^6.6",
         "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
+        "infection/infection": "^0.26.14",
+        "laravel/breeze": "^1.12",
+        "laravel/pint": "^1.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
+        "nunomaduro/larastan": "^2.2",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0"
     },
@@ -57,7 +65,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "infection/extension-installer": true
         }
     },
     "minimum-stability": "dev",
