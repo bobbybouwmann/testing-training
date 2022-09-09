@@ -51,6 +51,7 @@ class SendOrderCompletedNotificationTest extends TestCase
     {
         // Arrange
         $order = Order::factory()->create([
+            'status' => OrderStatus::PAID,
             'user_id' => null,
         ]);
 
